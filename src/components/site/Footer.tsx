@@ -32,9 +32,10 @@ export function Footer() {
         <div>
           <h4 className="font-display text-sm font-bold mb-4 uppercase tracking-wider">Contact</h4>
           <ul className="space-y-2 text-sm text-primary-foreground/70">
-            <li>Gulf Joy Trading</li>
+            <li>Mongi Slim St., Oumaima Bldg.<br />1st Floor, Office A02<br />Gabes 6000, Tunisia</li>
             <li>golfjoy01@gmail.com</li>
             <li>+216 70 287 161</li>
+            <li className="pt-2">Mon–Fri, 8am–5pm</li>
           </ul>
         </div>
       </div>

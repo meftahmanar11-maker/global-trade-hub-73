@@ -39,7 +39,7 @@ function ContactPage() {
               </div>
               <div>
                 <h3 className="font-semibold mb-1">Headquarters</h3>
-                <p className="text-sm text-muted-foreground">123 Harbor Avenue<br />Port District, 10001</p>
+                <p className="text-sm text-muted-foreground">Mongi Slim Street, Oumaima Building<br />1st Floor, Office A02<br />Gabes 6000, Tunisia</p>
               </div>
             </div>
             <div className="flex gap-4">
@@ -57,7 +57,7 @@ function ContactPage() {
               </div>
               <div>
                 <h3 className="font-semibold mb-1">Phone</h3>
-                <p className="text-sm text-muted-foreground"><a href="tel:+21670287161" className="hover:text-brand">+216 70 287 161</a><br />Mon–Fri, 8am–7pm</p>
+                <p className="text-sm text-muted-foreground"><a href="tel:+21670287161" className="hover:text-brand">+216 70 287 161</a><br />Mon–Fri, 8am–5pm</p>
               </div>
             </div>
           </div>
