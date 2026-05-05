@@ -6,8 +6,7 @@ export const LANGUAGES: { code: Lang; label: string; flag: string }[] = [
   { code: "ar", label: "العربية", flag: "🇹🇳" },
 ];
 
-export const translations = {
-  en: {
+const en = {
     nav: { home: "Home", products: "Products", about: "About", contact: "Contact", quote: "Request Quote" },
     hero: {
       badge: "Premium fresh produce importer",
