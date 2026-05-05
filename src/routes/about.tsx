@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — GlobalReach" },
-      { name: "description", content: "Learn about GlobalReach — a trusted international logistics and trading partner serving 120+ countries." },
-      { property: "og:title", content: "About — GlobalReach" },
+      { title: "About — Gulf Joy" },
+      { name: "description", content: "Gulf Joy is a trusted importer of premium fresh fruits and vegetables — bananas, onions, cantaloupes, peppers, grapes and watermelons." },
+      { property: "og:title", content: "About — Gulf Joy" },
       { property: "og:description", content: "Our story, mission and values." },
     ],
   }),
@@ -14,10 +14,10 @@ export const Route = createFileRoute("/about")({
 });
 
 const values = [
-  { title: "Reliability", desc: "We do what we say. Every shipment, every customer, every time." },
-  { title: "Transparency", desc: "Clear pricing, real-time tracking and honest communication." },
-  { title: "Expertise", desc: "Decades of combined experience navigating global trade complexity." },
-  { title: "Partnership", desc: "We treat your business like our own — long-term, not transactional." },
+  { title: "Freshness First", desc: "Every box is selected, packed and shipped to arrive at peak quality." },
+  { title: "Trusted Sourcing", desc: "Long-standing relationships with growers we know and visit personally." },
+  { title: "Reliability", desc: "Consistent supply, honest pricing and on-time delivery — every season." },
+  { title: "Care for People", desc: "Fair partnerships with farmers and respect for the communities we work with." },
 ];
 
 function AboutPage() {
@@ -26,9 +26,9 @@ function AboutPage() {
       <section className="bg-gradient-hero text-primary-foreground py-20">
         <div className="container mx-auto px-6 lg:px-8 max-w-3xl">
           <p className="text-sm uppercase tracking-wider text-secondary font-semibold mb-3">About us</p>
-          <h1 className="text-5xl font-display font-bold text-balance mb-5">A decade of moving the world's goods.</h1>
+          <h1 className="text-5xl font-display font-bold text-balance mb-5">Bringing the world's freshest harvest home.</h1>
           <p className="text-lg text-primary-foreground/80">
-            GlobalReach was founded with one simple mission: make international trade effortless for businesses of every size.
+            Gulf Joy was founded with one simple mission: import the highest-quality fresh produce and deliver it with care.
           </p>
         </div>
       </section>
@@ -39,16 +39,17 @@ function AboutPage() {
             <h2 className="text-3xl font-display font-bold mb-5">Our story</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Founded over a decade ago by a team of seasoned freight forwarders and customs experts,
-                GlobalReach has grown into a trusted partner for importers and exporters across 120+ countries.
+                Gulf Joy was built around a simple love for fresh, honest food. We import premium fruits and
+                vegetables — bananas, onions, cantaloupes, peppers, grapes and watermelons — directly from
+                growers we know and trust.
               </p>
               <p>
-                We combine deep regional expertise with a global agent network to deliver shipments that arrive
-                on time, in compliance, and at the right cost.
+                We work closely with farms and cooperatives across multiple continents, combining careful sourcing
+                with modern cold-chain logistics so every shipment arrives crisp, ripe and ready to sell.
               </p>
               <p>
-                Today, our team of more than 200 logistics professionals handles thousands of shipments every
-                month — from a single pallet of specialty goods to multi-vessel industrial projects.
+                Whether you're a wholesaler, retailer or food service operator, our team handles every detail —
+                from selection at origin to delivery at your door.
               </p>
             </div>
           </div>

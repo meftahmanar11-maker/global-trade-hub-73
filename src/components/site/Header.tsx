@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const nav = [
   { to: "/", label: "Home" },
-  { to: "/services", label: "Services" },
+  { to: "/services", label: "Products" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ] as const;
@@ -14,10 +14,10 @@ export function Header() {
       <div className="container mx-auto px-6 lg:px-8 py-5 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
           <span className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-gradient-accent text-brand-deep font-display font-bold">
-            G
+            GJ
           </span>
           <span className="font-display text-xl font-bold tracking-tight">
-            GlobalReach
+            Gulf Joy
           </span>
         </Link>
 
@@ -36,7 +36,7 @@ export function Header() {
         </nav>
 
         <Button asChild variant="hero" size="sm">
-          <Link to="/contact">Get a Quote</Link>
+          <Link to="/contact">Request Quote</Link>
         </Button>
       </div>
     </header>
