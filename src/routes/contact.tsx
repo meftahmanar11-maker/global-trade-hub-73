@@ -48,7 +48,7 @@ function ContactPage() {
               </div>
               <div>
                 <h3 className="font-semibold mb-1">Email</h3>
-                <p className="text-sm text-muted-foreground">info@globalreach.co<br />sales@globalreach.co</p>
+                <p className="text-sm text-muted-foreground"><a href="mailto:golfjoy01@gmail.com" className="hover:text-brand">golfjoy01@gmail.com</a></p>
               </div>
             </div>
             <div className="flex gap-4">
@@ -57,7 +57,7 @@ function ContactPage() {
               </div>
               <div>
                 <h3 className="font-semibold mb-1">Phone</h3>
-                <p className="text-sm text-muted-foreground">+1 (555) 010-2030<br />Mon–Fri, 8am–7pm</p>
+                <p className="text-sm text-muted-foreground"><a href="tel:+21670287161" className="hover:text-brand">+216 70 287 161</a><br />Mon–Fri, 8am–7pm</p>
               </div>
             </div>
           </div>
