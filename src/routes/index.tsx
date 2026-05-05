@@ -1,39 +1,41 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import { Ship, Plane, FileCheck2, Warehouse, Globe2, ShieldCheck, Clock } from "lucide-react";
-import heroImg from "@/assets/hero-cargo.jpg";
+import { Leaf, Truck, ShieldCheck, Globe2, Snowflake, Clock } from "lucide-react";
+import heroImg from "@/assets/hero-produce.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "GlobalReach — Connecting Your Business to the World" },
-      { name: "description", content: "International import & export logistics: sea freight, air freight, customs clearance, and supply chain management." },
-      { property: "og:title", content: "GlobalReach — Connecting Your Business to the World" },
-      { property: "og:description", content: "Reliable import & export logistics for global businesses." },
+      { title: "Gulf Joy — Premium Fresh Produce Importer" },
+      { name: "description", content: "Gulf Joy imports premium-quality bananas, onions, cantaloupes, peppers, grapes and watermelons from trusted growers worldwide." },
+      { property: "og:title", content: "Gulf Joy — Premium Fresh Produce Importer" },
+      { property: "og:description", content: "Premium fresh fruits and vegetables, delivered straight from the world's best growers." },
       { property: "og:image", content: heroImg },
     ],
   }),
   component: HomePage,
 });
 
-const services = [
-  { icon: Ship, title: "Sea Freight", desc: "Cost-effective FCL & LCL shipping across all major trade lanes." },
-  { icon: Plane, title: "Air Freight", desc: "Time-critical cargo delivered with priority handling worldwide." },
-  { icon: FileCheck2, title: "Customs Clearance", desc: "Expert brokerage to keep your shipments compliant and moving." },
-  { icon: Warehouse, title: "Warehousing", desc: "Strategic storage and distribution from bonded facilities." },
+const products = [
+  { emoji: "🍌", title: "Bananas", desc: "Sweet, ripe Cavendish bananas sourced from premium plantations." },
+  { emoji: "🧅", title: "Onions", desc: "Yellow, red and white onions — firm, flavorful and long-lasting." },
+  { emoji: "🍈", title: "Cantaloupes", desc: "Aromatic, juicy melons picked at peak ripeness." },
+  { emoji: "🫑", title: "Peppers", desc: "Crisp bell peppers in vibrant red, yellow and green." },
+  { emoji: "🍇", title: "Grapes", desc: "Seedless table grapes — sweet, plump and perfectly fresh." },
+  { emoji: "🍉", title: "Watermelons", desc: "Refreshing, sweet watermelons with deep red flesh." },
 ];
 
 const stats = [
-  { value: "120+", label: "Countries served" },
-  { value: "15K", label: "Shipments / year" },
-  { value: "98%", label: "On-time delivery" },
-  { value: "24/7", label: "Live support" },
+  { value: "6+", label: "Premium products" },
+  { value: "20+", label: "Sourcing countries" },
+  { value: "98%", label: "Fresh on arrival" },
+  { value: "24/7", label: "Logistics support" },
 ];
 
 const why = [
-  { icon: Globe2, title: "Global Network", desc: "Partners and agents in every major port and trade hub worldwide." },
-  { icon: ShieldCheck, title: "Trusted & Compliant", desc: "Full documentation, insurance, and regulatory expertise." },
-  { icon: Clock, title: "On-Time, Every Time", desc: "Real-time tracking and proactive communication on every shipment." },
+  { icon: Leaf, title: "Farm-Fresh Quality", desc: "Hand-picked from trusted growers and inspected at every step." },
+  { icon: Snowflake, title: "Cold Chain Logistics", desc: "Temperature-controlled shipping preserves freshness from farm to port." },
+  { icon: ShieldCheck, title: "Certified & Compliant", desc: "Full phytosanitary documentation and food-safety standards." },
 ];
 
 function HomePage() {
@@ -47,18 +49,18 @@ function HomePage() {
             <div className="space-y-7">
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs uppercase tracking-wider">
                 <span className="h-1.5 w-1.5 rounded-full bg-secondary" />
-                International trade made simple
+                Premium fresh produce importer
               </span>
               <h1 className="text-5xl lg:text-6xl font-display font-bold leading-[1.05] text-balance">
-                Connecting your business <span className="text-secondary">to the world.</span>
+                Bringing the world's <span className="text-secondary">freshest harvest</span> to your market.
               </h1>
               <p className="text-lg text-primary-foreground/80 max-w-xl leading-relaxed">
-                Seamless import &amp; export logistics — from sourcing to last-mile delivery.
-                We simplify global trade so you can focus on growing your business.
+                Gulf Joy imports premium bananas, onions, cantaloupes, peppers, grapes and watermelons —
+                sourced from trusted growers and delivered with care.
               </p>
               <div className="flex flex-wrap gap-4 pt-2">
                 <Button asChild variant="hero" size="lg">
-                  <Link to="/services">Explore Services</Link>
+                  <Link to="/services">Our Products</Link>
                 </Button>
                 <Button asChild variant="outlineLight" size="lg">
                   <Link to="/contact">Get in Touch</Link>
@@ -70,9 +72,9 @@ function HomePage() {
               <div className="absolute -top-6 -left-6 w-full h-full rounded-2xl bg-secondary/30" />
               <img
                 src={heroImg}
-                alt="Container ship at sea carrying international cargo"
+                alt="Assortment of fresh imported fruits and vegetables — bananas, onions, cantaloupes, peppers, grapes, watermelons"
                 width={1600}
-                height={1024}
+                height={1200}
                 className="relative rounded-2xl w-full aspect-[4/3] object-cover shadow-elegant"
               />
             </div>
@@ -90,21 +92,21 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* Products */}
       <section className="py-24">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-2xl mb-14">
-            <p className="text-sm uppercase tracking-wider text-brand font-semibold mb-3">What we do</p>
-            <h2 className="text-4xl font-display font-bold text-balance">Comprehensive global trade solutions</h2>
+            <p className="text-sm uppercase tracking-wider text-brand font-semibold mb-3">Our products</p>
+            <h2 className="text-4xl font-display font-bold text-balance">Fresh fruits & vegetables, year-round.</h2>
           </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {services.map((s) => (
-              <div key={s.title} className="group p-7 bg-card text-card-foreground rounded-2xl border border-border hover:border-brand/30 hover:shadow-elegant transition-all">
-                <div className="h-12 w-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center mb-5 group-hover:bg-brand group-hover:text-primary-foreground transition-colors">
-                  <s.icon className="h-6 w-6" />
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {products.map((p) => (
+              <div key={p.title} className="group p-7 bg-card text-card-foreground rounded-2xl border border-border hover:border-brand/30 hover:shadow-elegant transition-all">
+                <div className="h-14 w-14 rounded-xl bg-brand/10 flex items-center justify-center mb-5 text-3xl">
+                  {p.emoji}
                 </div>
-                <h3 className="text-xl font-display font-bold mb-2">{s.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                <h3 className="text-xl font-display font-bold mb-2">{p.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
               </div>
             ))}
           </div>
@@ -115,11 +117,11 @@ function HomePage() {
       <section className="py-24 bg-card border-y border-border">
         <div className="container mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-start">
           <div>
-            <p className="text-sm uppercase tracking-wider text-brand font-semibold mb-3">Why GlobalReach</p>
-            <h2 className="text-4xl font-display font-bold text-balance mb-5">A logistics partner you can build on.</h2>
+            <p className="text-sm uppercase tracking-wider text-brand font-semibold mb-3">Why Gulf Joy</p>
+            <h2 className="text-4xl font-display font-bold text-balance mb-5">Freshness you can trust, every shipment.</h2>
             <p className="text-muted-foreground leading-relaxed">
-              For over a decade we've helped manufacturers, distributors and retailers move goods across borders —
-              with the network, the expertise, and the technology to make it effortless.
+              We work directly with farms and cooperatives around the world, combining careful sourcing
+              with modern cold-chain logistics to deliver produce that arrives crisp, ripe and ready to sell.
             </p>
             <Button asChild className="mt-8" variant="default" size="lg">
               <Link to="/about">About our company</Link>
@@ -146,10 +148,10 @@ function HomePage() {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="bg-gradient-hero text-primary-foreground rounded-3xl p-12 lg:p-16 text-center shadow-elegant">
             <h2 className="text-4xl lg:text-5xl font-display font-bold mb-4 text-balance">
-              Ready to streamline your global trade?
+              Ready to stock the freshest produce?
             </h2>
             <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto mb-8">
-              Get a tailored quote in 24 hours. No obligation, just clear pricing.
+              Tell us what you need — we'll send pricing, availability and shipping details within 24 hours.
             </p>
             <Button asChild variant="hero" size="xl">
               <Link to="/contact">Request a Quote</Link>
