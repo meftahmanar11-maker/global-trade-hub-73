@@ -59,7 +59,7 @@ function ProductsPage() {
         <div className="container mx-auto px-6 lg:px-8 max-w-3xl">
           <p className="text-sm uppercase tracking-wider text-secondary font-semibold mb-3">Products</p>
           <h1 className="text-5xl font-display font-bold text-balance mb-5">Fresh fruits & vegetables, sourced worldwide.</h1>
-          <p className="text-lg text-primary-foreground's/80 text-primary-foreground/80">
+          <p className="text-lg text-primary-foreground/80">
             From a single pallet to full container loads — Gulf Joy delivers premium-quality produce, year-round.
           </p>
         </div>
