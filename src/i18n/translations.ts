@@ -101,8 +101,11 @@ const en = {
       links: { about: "About Us", products: "Products", contact: "Contact" },
       rights: "All rights reserved.",
     },
-  },
-  fr: {
+};
+
+export type Dict = typeof en;
+
+const fr: Dict = {
     nav: { home: "Accueil", products: "Produits", about: "À propos", contact: "Contact", quote: "Demander un devis" },
     hero: {
       badge: "Importateur de produits frais premium",
@@ -197,8 +200,9 @@ const en = {
       links: { about: "À propos", products: "Produits", contact: "Contact" },
       rights: "Tous droits réservés.",
     },
-  },
-  ar: {
+};
+
+const ar: Dict = {
     nav: { home: "الرئيسية", products: "المنتجات", about: "من نحن", contact: "اتصل بنا", quote: "اطلب عرض سعر" },
     hero: {
       badge: "مستورد منتجات طازجة فاخرة",
@@ -293,7 +297,7 @@ const en = {
       links: { about: "من نحن", products: "المنتجات", contact: "اتصل بنا" },
       rights: "جميع الحقوق محفوظة.",
     },
-  },
-} as const;
+};
 
-export type Dict = typeof translations.en;
+export const translations: Record<Lang, Dict> = { en, fr, ar };
+
