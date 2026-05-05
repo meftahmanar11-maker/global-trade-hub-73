@@ -1,17 +1,20 @@
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-
-const nav = [
-  { to: "/", label: "Home" },
-  { to: "/services", label: "Products" },
-  { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact" },
-] as const;
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 export function Header() {
+  const { t } = useI18n();
+  const nav = [
+    { to: "/", label: t.nav.home },
+    { to: "/services", label: t.nav.products },
+    { to: "/about", label: t.nav.about },
+    { to: "/contact", label: t.nav.contact },
+  ] as const;
+
   return (
     <header className="sticky top-0 z-50 bg-brand/95 backdrop-blur supports-[backdrop-filter]:bg-brand/80 text-primary-foreground">
-      <div className="container mx-auto px-6 lg:px-8 py-5 flex items-center justify-between">
+      <div className="container mx-auto px-6 lg:px-8 py-5 flex items-center justify-between gap-4">
         <Link to="/" className="flex items-center gap-2 group">
           <span className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-gradient-accent text-brand-deep font-display font-bold">
             GJ
@@ -35,9 +38,12 @@ export function Header() {
           ))}
         </nav>
 
-        <Button asChild variant="hero" size="sm">
-          <Link to="/contact">Request Quote</Link>
-        </Button>
+        <div className="flex items-center gap-2">
+          <LanguageSwitcher />
+          <Button asChild variant="hero" size="sm" className="hidden sm:inline-flex">
+            <Link to="/contact">{t.nav.quote}</Link>
+          </Button>
+        </div>
       </div>
     </header>
   );
