@@ -33,8 +33,8 @@ export function Footer() {
           <h4 className="font-display text-sm font-bold mb-4 uppercase tracking-wider">Contact</h4>
           <ul className="space-y-2 text-sm text-primary-foreground/70">
             <li>Gulf Joy Trading</li>
-            <li>info@gulfjoy.co</li>
-            <li>+1 (555) 010-2030</li>
+            <li>golfjoy01@gmail.com</li>
+            <li>+216 70 287 161</li>
           </ul>
         </div>
       </div>
