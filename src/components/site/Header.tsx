@@ -14,15 +14,24 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-brand/95 backdrop-blur supports-[backdrop-filter]:bg-brand/80 text-primary-foreground">
-      <div className="container mx-auto px-6 lg:px-8 py-5 flex items-center justify-between gap-4">
-        <Link to="/" className="flex items-center gap-2 group">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-gradient-accent text-brand-deep font-display font-bold">
-            GJ
-          </span>
-          <span className="font-display text-xl font-bold tracking-tight">
-            Gulf Joy
-          </span>
-        </Link>
+      <div className="container mx-auto px-6 lg:px-8 py-5 flex flex-col gap-4">
+        <div className="flex items-center justify-between gap-4">
+          <Link to="/" className="flex items-center gap-2 group">
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-gradient-accent text-brand-deep font-display font-bold">
+              GJ
+            </span>
+            <span className="font-display text-xl font-bold tracking-tight">
+              Gulf Joy
+            </span>
+          </Link>
+
+          <div className="flex items-center gap-2">
+            <LanguageSwitcher />
+            <Button asChild variant="hero" size="sm" className="hidden sm:inline-flex">
+              <Link to="/contact">{t.nav.quote}</Link>
+            </Button>
+          </div>
+        </div>
 
         <nav className="flex flex-wrap items-center gap-4 md:gap-8">
           {nav.map((item) => (
@@ -37,13 +46,6 @@ export function Header() {
             </Link>
           ))}
         </nav>
-
-        <div className="flex items-center gap-2">
-          <LanguageSwitcher />
-          <Button asChild variant="hero" size="sm" className="hidden sm:inline-flex">
-            <Link to="/contact">{t.nav.quote}</Link>
-          </Button>
-        </div>
       </div>
     </header>
   );
