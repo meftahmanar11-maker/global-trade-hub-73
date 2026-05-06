@@ -33,13 +33,13 @@ export function Header() {
           </div>
         </div>
 
-        <nav className="flex flex-wrap items-center gap-4 md:gap-8">
+        <nav className="flex flex-wrap items-center gap-1 sm:gap-2 border-t border-white/10 pt-3">
           {nav.map((item) => (
             <Link
               key={item.to}
               to={item.to}
-              className="text-sm font-medium text-primary-foreground/80 hover:text-secondary transition-colors"
-              activeProps={{ className: "text-secondary" }}
+              className="font-display text-sm uppercase tracking-wider font-semibold px-3 py-1.5 rounded-md text-primary-foreground/75 hover:text-secondary hover:bg-white/5 transition-colors"
+              activeProps={{ className: "text-secondary bg-white/10" }}
               activeOptions={{ exact: item.to === "/" }}
             >
               {item.label}
