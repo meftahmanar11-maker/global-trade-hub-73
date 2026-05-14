@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About — Gulf Joy</title>
-  <meta name="description" content="Gulf Joy is a trusted importer of premium fresh fruits and vegetables — our story, mission and values." />
-  <meta property="og:title" content="About — Gulf Joy" />
-  <meta property="og:description" content="Our story, mission and values." />
+  <title>Products — Gulf Joy</title>
+  <meta name="description" content="Premium imported bananas, onions, cantaloupes, peppers, grapes and watermelons from Gulf Joy." />
+  <meta property="og:title" content="Products — Gulf Joy" />
+  <meta property="og:description" content="Explore the fresh produce we import." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,7 +22,6 @@
       --card-muted: #4b5b78;
       --border: rgba(255,255,255,0.12);
       --radius: 16px;
-      --shadow: 0 20px 50px -20px rgba(0,0,0,0.45);
     }
     * { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; }
@@ -66,33 +65,34 @@
     .hero h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); margin-bottom: 18px; }
     .hero p.lede { font-size: 1.15rem; color: var(--muted); }
 
-    /* Story + Values */
+    /* Products grid */
     section.band-light { background: #f6f8fc; color: var(--card-fg); padding: 90px 0; }
-    .grid-2 { display: grid; gap: 48px; }
-    @media (min-width: 900px) { .grid-2 { grid-template-columns: 1fr 1fr; gap: 64px; } }
-    .story h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); margin-bottom: 20px; }
-    .story p { color: var(--card-muted); margin: 0 0 16px; }
-    .values-card {
-      background: #fff; border: 1px solid #e3e8f0; border-radius: 20px; padding: 36px;
-      box-shadow: 0 10px 30px -20px rgba(15,42,82,0.25);
+    .grid-3 { display: grid; gap: 24px; grid-template-columns: 1fr; }
+    @media (min-width: 720px) { .grid-3 { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1000px) { .grid-3 { grid-template-columns: 1fr 1fr 1fr; } }
+    .product {
+      background: #fff; border: 1px solid #e3e8f0; border-radius: 20px; padding: 32px;
+      transition: box-shadow 0.2s, transform 0.2s;
     }
-    .values-card h3 { font-size: 1.25rem; margin-bottom: 24px; }
-    .value { padding: 14px 0; border-top: 1px solid #eef1f7; }
-    .value:first-of-type { border-top: 0; padding-top: 0; }
-    .value h4 { font-size: 1rem; margin-bottom: 4px; color: var(--card-fg); }
-    .value p { color: var(--card-muted); font-size: 0.92rem; margin: 0; }
+    .product:hover { box-shadow: 0 20px 50px -25px rgba(15,42,82,0.3); transform: translateY(-2px); }
+    .product .icon {
+      height: 64px; width: 64px; border-radius: 14px; background: rgba(15,42,82,0.08);
+      display: flex; align-items: center; justify-content: center; font-size: 2.25rem; margin-bottom: 20px;
+    }
+    .product h2 { font-size: 1.5rem; margin-bottom: 12px; }
+    .product p.desc { color: var(--card-muted); margin: 0 0 20px; }
+    .product ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; color: var(--card-fg); }
+    .product li { display: flex; align-items: center; gap: 10px; }
+    .product li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
 
-    /* CTA band */
-    section.band-card { background: #fff; color: var(--card-fg); padding: 90px 0; border-top: 1px solid #e3e8f0; }
-    .cta-inner { max-width: 640px; margin: 0 auto; text-align: center; }
-    .cta-inner h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); margin-bottom: 14px; }
-    .cta-inner p { color: var(--card-muted); margin: 0 0 28px; }
+    /* CTA */
+    section.band-card { background: #fff; color: var(--card-fg); padding: 80px 0; border-top: 1px solid #e3e8f0; text-align: center; }
     .btn {
-      display: inline-block; padding: 13px 26px; border-radius: 10px;
-      font-weight: 600; font-size: 0.95rem; transition: transform 0.15s, opacity 0.2s; border: 0; cursor: pointer;
+      display: inline-block; padding: 13px 28px; border-radius: 10px;
+      font-weight: 600; font-size: 0.95rem; transition: transform 0.15s; border: 0; cursor: pointer;
     }
     .btn:hover { transform: translateY(-1px); }
-    .btn-primary { background: var(--accent); color: #0f2a52; }
+    .btn-primary { background: var(--bg); color: #fff; }
 
     /* Footer */
     footer { background: #08203f; color: var(--muted); padding: 50px 0 30px; font-size: 0.9rem; }
@@ -113,8 +113,8 @@
       </div>
       <nav class="primary" aria-label="Primary">
         <a href="/">Home</a>
-        <a href="/services">Products</a>
-        <a href="/about" class="active">About</a>
+        <a href="/services" class="active">Products</a>
+        <a href="/about">About</a>
         <a href="/contact">Contact</a>
       </nav>
     </div>
@@ -123,35 +123,84 @@
   <main>
     <section class="hero">
       <div class="container">
-        <p class="eyebrow-light">About us</p>
-        <h1>Bringing the world's freshest harvest home.</h1>
-        <p class="lede">Gulf Joy was founded with one simple mission: import the highest-quality fresh produce and deliver it with care.</p>
+        <p class="eyebrow-light">What we import</p>
+        <h1>Premium fresh produce, sourced with care.</h1>
+        <p class="lede">From plantation to port, we hand-pick every crate. Explore our six core categories — each backed by trusted growers and modern cold-chain logistics.</p>
       </div>
     </section>
 
     <section class="band-light">
-      <div class="container grid-2">
-        <div class="story">
-          <h2>Our story</h2>
-          <p>Gulf Joy was built around a simple love for fresh, honest food. We import premium fruits and vegetables — bananas, onions, cantaloupes, peppers, grapes and watermelons — directly from growers we know and trust.</p>
-          <p>We work closely with farms and cooperatives across multiple continents, combining careful sourcing with modern cold-chain logistics so every shipment arrives crisp, ripe and ready to sell.</p>
-          <p>Whether you're a wholesaler, retailer or food service operator, our team handles every detail — from selection at origin to delivery at your door.</p>
+      <div class="container">
+        <div class="grid-3">
+          <article class="product">
+            <div class="icon">🍌</div>
+            <h2>Bananas</h2>
+            <p class="desc">Cavendish bananas selected at optimal ripeness, packed for long-haul freshness.</p>
+            <ul>
+              <li>Origin: Ecuador, Philippines</li>
+              <li>Cartons of 18.14 kg</li>
+              <li>Year-round availability</li>
+            </ul>
+          </article>
+          <article class="product">
+            <div class="icon">🧅</div>
+            <h2>Onions</h2>
+            <p class="desc">Yellow, red and white onions in multiple sizes — firm, dry and well-cured.</p>
+            <ul>
+              <li>Origin: Egypt, Netherlands, India</li>
+              <li>Mesh bags 5–25 kg</li>
+              <li>Long shelf life</li>
+            </ul>
+          </article>
+          <article class="product">
+            <div class="icon">🍈</div>
+            <h2>Cantaloupes</h2>
+            <p class="desc">Sweet, aromatic melons harvested at peak Brix and shipped under controlled temperature.</p>
+            <ul>
+              <li>Origin: Spain, Morocco, Brazil</li>
+              <li>5–8 fruits per carton</li>
+              <li>Seasonal availability</li>
+            </ul>
+          </article>
+          <article class="product">
+            <div class="icon">🫑</div>
+            <h2>Peppers</h2>
+            <p class="desc">Bell peppers in red, yellow and green — glossy, thick-walled and uniformly graded.</p>
+            <ul>
+              <li>Origin: Netherlands, Spain, Turkey</li>
+              <li>5 kg cartons</li>
+              <li>Mixed-color options</li>
+            </ul>
+          </article>
+          <article class="product">
+            <div class="icon">🍇</div>
+            <h2>Grapes</h2>
+            <p class="desc">Seedless table grapes — crisp, sweet and delivered with intact bloom.</p>
+            <ul>
+              <li>Origin: Egypt, South Africa, Peru</li>
+              <li>4.5 kg cartons or punnets</li>
+              <li>Multiple varieties</li>
+            </ul>
+          </article>
+          <article class="product">
+            <div class="icon">🍉</div>
+            <h2>Watermelons</h2>
+            <p class="desc">Seedless and seeded watermelons with deep red flesh and high sugar content.</p>
+            <ul>
+              <li>Origin: Spain, Greece, Turkey</li>
+              <li>Bulk bins or cartons</li>
+              <li>Spring–summer season</li>
+            </ul>
+          </article>
         </div>
-        <aside class="values-card">
-          <h3>Our values</h3>
-          <div class="value"><h4>Freshness First</h4><p>Every box is selected, packed and shipped to arrive at peak quality.</p></div>
-          <div class="value"><h4>Trusted Sourcing</h4><p>Long-standing relationships with growers we know and visit personally.</p></div>
-          <div class="value"><h4>Reliability</h4><p>Consistent supply, honest pricing and on-time delivery — every season.</p></div>
-          <div class="value"><h4>Care for People</h4><p>Fair partnerships with farmers and respect for the communities we work with.</p></div>
-        </aside>
       </div>
     </section>
 
     <section class="band-card">
-      <div class="container cta-inner">
-        <h2>Let's move your business forward.</h2>
-        <p>Talk to our team about your next shipment or supply chain project.</p>
-        <a href="/contact" class="btn btn-primary">Contact us</a>
+      <div class="container">
+        <h2 style="font-size: clamp(1.75rem, 3vw, 2.25rem); margin-bottom: 14px;">Need a custom quote?</h2>
+        <p style="color: var(--card-muted); margin: 0 auto 28px; max-width: 540px;">Tell us your volumes, destination port and target window — we'll come back with pricing and lead times.</p>
+        <a href="/contact" class="btn btn-primary">Request a quote</a>
       </div>
     </section>
   </main>
