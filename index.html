@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Products — Gulf Joy</title>
-  <meta name="description" content="Premium imported bananas, onions, cantaloupes, peppers, grapes and watermelons from Gulf Joy." />
-  <meta property="og:title" content="Products — Gulf Joy" />
-  <meta property="og:description" content="Explore the fresh produce we import." />
+  <title>Contact — Gulf Joy</title>
+  <meta name="description" content="Get in touch with Gulf Joy for produce quotes, availability and order inquiries." />
+  <meta property="og:title" content="Contact — Gulf Joy" />
+  <meta property="og:description" content="Reach our team — quotes within 24 hours." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -65,31 +65,45 @@
     .hero h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); margin-bottom: 18px; }
     .hero p.lede { font-size: 1.15rem; color: var(--muted); }
 
-    /* Products grid */
+    /* Contact section */
     section.band-light { background: #f6f8fc; color: var(--card-fg); padding: 90px 0; }
-    .grid-3 { display: grid; gap: 24px; grid-template-columns: 1fr; }
-    @media (min-width: 720px) { .grid-3 { grid-template-columns: 1fr 1fr; } }
-    @media (min-width: 1000px) { .grid-3 { grid-template-columns: 1fr 1fr 1fr; } }
-    .product {
-      background: #fff; border: 1px solid #e3e8f0; border-radius: 20px; padding: 32px;
-      transition: box-shadow 0.2s, transform 0.2s;
-    }
-    .product:hover { box-shadow: 0 20px 50px -25px rgba(15,42,82,0.3); transform: translateY(-2px); }
-    .product .icon {
-      height: 64px; width: 64px; border-radius: 14px; background: rgba(15,42,82,0.08);
-      display: flex; align-items: center; justify-content: center; font-size: 2.25rem; margin-bottom: 20px;
-    }
-    .product h2 { font-size: 1.5rem; margin-bottom: 12px; }
-    .product p.desc { color: var(--card-muted); margin: 0 0 20px; }
-    .product ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; color: var(--card-fg); }
-    .product li { display: flex; align-items: center; gap: 10px; }
-    .product li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+    .contact-grid { display: grid; gap: 40px; grid-template-columns: 1fr; }
+    @media (min-width: 900px) { .contact-grid { grid-template-columns: 1fr 2fr; gap: 56px; } }
 
-    /* CTA */
-    section.band-card { background: #fff; color: var(--card-fg); padding: 80px 0; border-top: 1px solid #e3e8f0; text-align: center; }
+    .info-item { display: flex; gap: 16px; margin-bottom: 28px; }
+    .info-item .ico {
+      flex-shrink: 0; height: 44px; width: 44px; border-radius: 10px;
+      background: rgba(15,42,82,0.08); color: var(--bg);
+      display: flex; align-items: center; justify-content: center; font-size: 1.25rem;
+    }
+    .info-item h3 { font-size: 1rem; margin: 0 0 4px; }
+    .info-item p { margin: 0; color: var(--card-muted); font-size: 0.92rem; }
+    .info-item a:hover { color: var(--bg); text-decoration: underline; }
+
+    /* Form */
+    .form-card {
+      background: #fff; border: 1px solid #e3e8f0; border-radius: 20px; padding: 36px;
+      box-shadow: 0 20px 60px -30px rgba(15,42,82,0.25);
+    }
+    .form-row { display: grid; gap: 18px; grid-template-columns: 1fr; margin-bottom: 18px; }
+    @media (min-width: 600px) { .form-row { grid-template-columns: 1fr 1fr; } }
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field label { font-size: 0.85rem; font-weight: 600; color: var(--card-fg); }
+    .field input, .field textarea {
+      font-family: inherit; font-size: 0.95rem; padding: 11px 14px;
+      border: 1px solid #d6dde8; border-radius: 10px; background: #fff; color: var(--card-fg);
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .field input:focus, .field textarea:focus {
+      outline: none; border-color: var(--bg);
+      box-shadow: 0 0 0 3px rgba(15,42,82,0.12);
+    }
+    .field textarea { resize: vertical; min-height: 120px; }
+
     .btn {
       display: inline-block; padding: 13px 28px; border-radius: 10px;
       font-weight: 600; font-size: 0.95rem; transition: transform 0.15s; border: 0; cursor: pointer;
+      font-family: inherit;
     }
     .btn:hover { transform: translateY(-1px); }
     .btn-primary { background: var(--bg); color: #fff; }
@@ -113,9 +127,9 @@
       </div>
       <nav class="primary" aria-label="Primary">
         <a href="/">Home</a>
-        <a href="/services" class="active">Products</a>
+        <a href="/services">Products</a>
         <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+        <a href="/contact" class="active">Contact</a>
       </nav>
     </div>
   </header>
@@ -123,84 +137,67 @@
   <main>
     <section class="hero">
       <div class="container">
-        <p class="eyebrow-light">What we import</p>
-        <h1>Premium fresh produce, sourced with care.</h1>
-        <p class="lede">From plantation to port, we hand-pick every crate. Explore our six core categories — each backed by trusted growers and modern cold-chain logistics.</p>
+        <p class="eyebrow-light">Get in touch</p>
+        <h1>Let's talk produce.</h1>
+        <p class="lede">Tell us your volumes, destination port and target window. Our team replies to every inquiry within 24 hours.</p>
       </div>
     </section>
 
     <section class="band-light">
       <div class="container">
-        <div class="grid-3">
-          <article class="product">
-            <div class="icon">🍌</div>
-            <h2>Bananas</h2>
-            <p class="desc">Cavendish bananas selected at optimal ripeness, packed for long-haul freshness.</p>
-            <ul>
-              <li>Origin: Ecuador, Philippines</li>
-              <li>Cartons of 18.14 kg</li>
-              <li>Year-round availability</li>
-            </ul>
-          </article>
-          <article class="product">
-            <div class="icon">🧅</div>
-            <h2>Onions</h2>
-            <p class="desc">Yellow, red and white onions in multiple sizes — firm, dry and well-cured.</p>
-            <ul>
-              <li>Origin: Egypt, Netherlands, India</li>
-              <li>Mesh bags 5–25 kg</li>
-              <li>Long shelf life</li>
-            </ul>
-          </article>
-          <article class="product">
-            <div class="icon">🍈</div>
-            <h2>Cantaloupes</h2>
-            <p class="desc">Sweet, aromatic melons harvested at peak Brix and shipped under controlled temperature.</p>
-            <ul>
-              <li>Origin: Spain, Morocco, Brazil</li>
-              <li>5–8 fruits per carton</li>
-              <li>Seasonal availability</li>
-            </ul>
-          </article>
-          <article class="product">
-            <div class="icon">🫑</div>
-            <h2>Peppers</h2>
-            <p class="desc">Bell peppers in red, yellow and green — glossy, thick-walled and uniformly graded.</p>
-            <ul>
-              <li>Origin: Netherlands, Spain, Turkey</li>
-              <li>5 kg cartons</li>
-              <li>Mixed-color options</li>
-            </ul>
-          </article>
-          <article class="product">
-            <div class="icon">🍇</div>
-            <h2>Grapes</h2>
-            <p class="desc">Seedless table grapes — crisp, sweet and delivered with intact bloom.</p>
-            <ul>
-              <li>Origin: Egypt, South Africa, Peru</li>
-              <li>4.5 kg cartons or punnets</li>
-              <li>Multiple varieties</li>
-            </ul>
-          </article>
-          <article class="product">
-            <div class="icon">🍉</div>
-            <h2>Watermelons</h2>
-            <p class="desc">Seedless and seeded watermelons with deep red flesh and high sugar content.</p>
-            <ul>
-              <li>Origin: Spain, Greece, Turkey</li>
-              <li>Bulk bins or cartons</li>
-              <li>Spring–summer season</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
+        <div class="contact-grid">
+          <div>
+            <div class="info-item">
+              <div class="ico">📍</div>
+              <div>
+                <h3>Headquarters</h3>
+                <p>Tunis, Tunisia</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="ico">✉️</div>
+              <div>
+                <h3>Email</h3>
+                <p><a href="mailto:golfjoy01@gmail.com" dir="ltr">golfjoy01@gmail.com</a></p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="ico">📞</div>
+              <div>
+                <h3>Phone</h3>
+                <p><a href="tel:+21670287161" dir="ltr">+216 70 287 161</a><br />Mon–Fri, 9:00–18:00</p>
+              </div>
+            </div>
+          </div>
 
-    <section class="band-card">
-      <div class="container">
-        <h2 style="font-size: clamp(1.75rem, 3vw, 2.25rem); margin-bottom: 14px;">Need a custom quote?</h2>
-        <p style="color: var(--card-muted); margin: 0 auto 28px; max-width: 540px;">Tell us your volumes, destination port and target window — we'll come back with pricing and lead times.</p>
-        <a href="/contact" class="btn btn-primary">Request a quote</a>
+          <form class="form-card" onsubmit="event.preventDefault(); alert('Thanks — we will be in touch shortly.'); this.reset();">
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Full name</label>
+                <input id="name" name="name" required />
+              </div>
+              <div class="field">
+                <label for="company">Company</label>
+                <input id="company" name="company" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required />
+              </div>
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" />
+              </div>
+            </div>
+            <div class="field" style="margin-bottom: 22px;">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Product, volume, destination port, target window…"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send inquiry</button>
+          </form>
+        </div>
       </div>
     </section>
   </main>
